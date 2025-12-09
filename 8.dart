@@ -1,10 +1,17 @@
 import 'dart:io';
 
 void main() {
-  stdout.write("Enter a sentence: ");
-  String input = stdin.readLineSync()!;
+  stdout.write("Enter first number: ");
+  int a = int.parse(stdin.readLineSync()!);
 
-  String noSpaces = input.replaceAll(" ", "");
+  stdout.write("Enter second number: ");
+  int b = int.parse(stdin.readLineSync()!);
 
-  print("String without spaces: $noSpaces");
+  print("\nBefore swapping: a = $a, b = $b");
+
+  int temp = a;
+  a = b;
+  b = temp;
+
+  print("After swapping: a = $a, b = $b");
 }
